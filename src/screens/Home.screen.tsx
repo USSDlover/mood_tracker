@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { MoodPicker } from '../components/MoodPicker';
 import { MoodOptionType, MoodOptionWithTimestamp } from '../types';
+import { format } from 'date-fns';
 
 export const HomeScreen: React.FC = () => {
     const [moodList, setMoodList] = React.useState<MoodOptionWithTimestamp[]>([])
@@ -14,7 +15,11 @@ export const HomeScreen: React.FC = () => {
 
     return <View style={styles.container}>
         <MoodPicker handleSelectMood={handleSelectMood} />
-        {moodList.map(item => <Text key={item.timestamp}>{item.mood.emoji} {new Date(item.timestamp).toString()}</Text>)}
+        {moodList.map(item =>
+            <Text key={item.timestamp}>
+                {item.mood.emoji} {format(new Date(item.timestamp), 'd')}
+            </Text>
+        )}
     </View>
 }
 
