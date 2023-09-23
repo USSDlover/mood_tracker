@@ -29,12 +29,12 @@ export const MoodPicker: React.FC<MoodPickerProps> = ({ handleSelectMood }) => {
         <Text style={styles.heading}>How are you right now?</Text>
         <View style={styles.moodPicker}>
             {moodOptions.map(option => (
-                <View>
+                <View key={option.emoji}>
                     <Pressable
                         onPress={() => setSelectedMood(option)}
                         style={[styles.modItem, selectedMood?.emoji === option.emoji ? styles.selectedMood : undefined]}
                     >
-                        <Text key={option.emoji}>{option.emoji}</Text>
+                        <Text>{option.emoji}</Text>
                     </Pressable>
                     <Text style={styles.descriptionText}>{option.emoji === selectedMood?.emoji ? option.description : undefined}</Text>
                 </View>
