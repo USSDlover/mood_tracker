@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { MoodOptionType } from '../types';
+import { theme } from '../theme';
 
 const moodOptions: MoodOptionType[] = [
     { emoji: '👨‍💻', description: 'studious' },
@@ -41,13 +42,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     selectedMood: {
-        borderColor: '#fff',
+        borderColor: theme.colorWhite,
         borderWidth: 2,
-        backgroundColor: '#454C73',
+        backgroundColor: theme.colorPurple,
     },
     descriptionText: {
         textAlign: 'center',
-        color: '#454C73',
+        color: theme.colorPurple,
         fontWeight: 'bold',
         fontSize: 10
     }
