@@ -1,4 +1,4 @@
 export const theme = {
-    colorPurple: '#454C73',
+    colorPurple: 'rgba(38,117,182,0.85)',
     colorWhite: '#fff'
 }
