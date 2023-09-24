@@ -66,7 +66,9 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: theme.colorPurple,
         borderRadius: 15,
-        padding: 15
+        padding: 15,
+        marginHorizontal: 20,
+        backgroundColor: 'rgba(13,58,162,0.1)'
     },
     moodPicker: {
         flexDirection: 'row',
