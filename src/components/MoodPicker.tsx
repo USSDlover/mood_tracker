@@ -89,10 +89,10 @@ const styles = StyleSheet.create({
     },
     heading: {
         fontSize: 20,
-        fontWeight: 'bold',
         letterSpacing: 1,
         marginBottom: 20,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: theme.fontFamilyBold
     },
     modItem: {
         height: 60,
