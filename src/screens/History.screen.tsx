@@ -8,7 +8,7 @@ export const HistoryScreen: React.FC = () => {
 
     return (
         <ScrollView>
-            {appContext.moodList.map(item => <MoodItemRow item={item} key={item.timestamp} />)}
+            {appContext.moodList.slice().reverse().map(item => <MoodItemRow item={item} key={item.timestamp} />)}
         </ScrollView>
     )
 }
